@@ -10,6 +10,7 @@ const routes = new Router();
 routes.post('/users',  UserController.store);
 routes.post('/sessions',  SessionController.store);
 
+// Usar autenticação em todas as rotas.
 routes.use(authMiddlewares);
 
 routes.put('/users', UserController.update);
